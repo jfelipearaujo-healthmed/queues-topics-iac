@@ -39,13 +39,13 @@ resource "aws_iam_policy" "sns_policy" {
 resource "aws_iam_role_policy_attachment" "queue_policy_attachment" {
   for_each = { for prefix in var.sa_prefix_roles : prefix => prefix }
 
-  role       = "${each.value}-service-account-role"
+  role       = "${each.value}-account-role"
   policy_arn = aws_iam_policy.queue_policy[each.value].arn
 }
 
 resource "aws_iam_role_policy_attachment" "sns_policy_attachment" {
   for_each = { for prefix in var.sa_prefix_roles : prefix => prefix }
 
-  role       = "${each.value}-service-account-role"
+  role       = "${each.value}-account-role"
   policy_arn = aws_iam_policy.sns_policy[each.value].arn
 }

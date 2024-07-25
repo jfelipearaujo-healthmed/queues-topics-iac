@@ -4,14 +4,14 @@ module "appointment_creator" {
   region = var.region
 
   sa_prefix_roles = [
-    "appointment-service",
-    "appointment-creator-service",
+    "appointments",
+    "appointment-creator",
   ]
 
   is_fifo = true
 
   queue_name = "AppointmentQueue.fifo"
-  topic_name = "AppointmentTopic"
+  topic_name = "AppointmentTopic.fifo"
 }
 
 module "review_processor" {
@@ -20,8 +20,8 @@ module "review_processor" {
   region = var.region
 
   sa_prefix_roles = [
-    "appointment-service",
-    "review-processor-service",
+    "appointments",
+    "review-processor",
   ]
 
   queue_name = "ReviewQueue"
