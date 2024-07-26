@@ -1,6 +1,6 @@
 @startuml architecture
 
-title "Banco de Dados e Componentes"
+title "Filas e Tópicos"
 
 node "AWS" {
     component "Topico de Agendamento de Consultas (FIFO)" as appointment_topic
