@@ -44,25 +44,25 @@ Bellow it is described all the resources used to create the architecture propose
 
 ## Requirements
 
-| Name                                                                      | Version |
-| ------------------------------------------------------------------------- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.7.4   |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws)                   | 5.38.0  |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.7.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.38.0 |
 ## Providers
 
 No providers.
 ## Inputs
 
-| Name                                                 | Description                               | Type          | Default                                     | Required |
-| ---------------------------------------------------- | ----------------------------------------- | ------------- | ------------------------------------------- | :------: |
-| <a name="input_region"></a> [region](#input\_region) | The default region to use for AWS         | `string`      | `"us-east-1"`                               |    no    |
-| <a name="input_tags"></a> [tags](#input\_tags)       | The default tags to use for AWS resources | `map(string)` | <pre>{<br>  "App": "queue_topic"<br>}</pre> |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | The default region to use for AWS | `string` | `"us-east-1"` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | The default tags to use for AWS resources | `map(string)` | <pre>{<br>  "App": "queue_topic"<br>}</pre> | no |
 ## Modules
 
-| Name                                                                                            | Source                | Version |
-| ----------------------------------------------------------------------------------------------- | --------------------- | ------- |
-| <a name="module_appointment_creator"></a> [appointment\_creator](#module\_appointment\_creator) | ./modules/queue_topic | n/a     |
-| <a name="module_review_processor"></a> [review\_processor](#module\_review\_processor)          | ./modules/queue_topic | n/a     |
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_appointment_creator"></a> [appointment\_creator](#module\_appointment\_creator) | ./modules/queue_topic | n/a |
+| <a name="module_review_processor"></a> [review\_processor](#module\_review\_processor) | ./modules/queue_topic | n/a |
 ## Resources
 
 No resources.
