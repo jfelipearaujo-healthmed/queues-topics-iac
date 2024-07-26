@@ -1,0 +1,15 @@
+@startuml architecture
+
+title "Banco de Dados e Componentes"
+
+node "AWS" {
+    component "Topico de Agendamento de Consultas (FIFO)" as appointment_topic
+    component "Topico de Revisão de Consultas" as review_topic
+    component "Fila de Agendamento de Consultas (FIFO)" as appointment_queue
+    component "Fila de Revisão de Consultas" as review_queue
+
+    appointment_topic -down-> appointment_queue
+    review_topic -down-> review_queue
+}
+
+@enduml
